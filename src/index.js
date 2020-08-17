@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import 'bootstrap-4-grid/css/grid.css';
+import './style.css';
+import {AddTask} from "./AddTask";
 
-import App from "./App";
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<AddTask />, document.getElementById("root"));
