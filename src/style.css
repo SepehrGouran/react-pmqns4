@@ -8,11 +8,11 @@ h1, p {
 }
 
 .add-task-cotainer {
-  padding-top: 20vh;
+  padding-top: 100px;
 }
 
 .background {
-  height: 30vh;
+  height: 200px;
   background-color: #00695c;
 }
 
@@ -53,4 +53,20 @@ h1, p {
 
 .add-button:hover {
   background-color: #009688;
+}
+
+.tasks-status {
+  display: inline-flex;
+}
+
+.tasks-status p {
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+.tasks-list {
+  margin-top: 50px;
+  height: 300px;
+  width: 100%;
+  border: 1px #00695c solid;
 }

@@ -2,13 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import 'bootstrap-4-grid/css/grid.css';
 import './style.css';
-import {AddTask} from "./AddTask";
+import {App} from "./App";
 
 ReactDOM.render(
-  <div className="background">
-    <div className="add-task-cotainer">
-      <AddTask />
-    </div>
-  </div>,
+  <App />,
   document.getElementById("root")
 );
