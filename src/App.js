@@ -7,12 +7,7 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: [
-        // {title: 'Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 Task 1 ', status: 'todo'},
-        // {title: 'Task 2', status: 'completed'},
-        // {title: 'Task 3', status: 'completed'},
-        // {title: 'Task 4', status: 'todo'},
-      ],
+      tasks: [],
       newTask: {
         title: '', status: 'todo'
       }
