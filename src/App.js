@@ -7,7 +7,9 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: [],
+      tasks: [
+        {title: 'Default Task', status: 'completed'},
+      ],
       newTask: {
         title: '', status: 'todo'
       }
@@ -64,7 +66,6 @@ export class App extends React.Component {
           statusChange={this.handelStatusChange}
           tasks={this.state.tasks} />
         </div>
-        <p>{JSON.stringify(this.state)}</p>
       </div>
     )
   }
