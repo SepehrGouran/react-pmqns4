@@ -1,4 +1,5 @@
 import React from "react";
+import {Task} from './Task';
 
 export class TasksList extends React.Component {
 
@@ -8,8 +9,8 @@ export class TasksList extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.tasks.map(task => <p>{task.title}</p>)}
+      <div className="container">
+        {this.props.tasks.map((task, index) => <Task statusChange={() => this.props.statusChange(index)} deleteTask={() => {this.props.deleteTask(index)}} task={task} key={index}/>)}
       </div>
     )
   }

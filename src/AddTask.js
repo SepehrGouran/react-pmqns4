@@ -5,22 +5,19 @@ export class AddTask extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handelAddTask = this.handelAddTask.bind(this);
   }
 
-  handelAddTask() {
-    alert('add task');
-  }
+
 
   render() {
     return (
       <div className="container add-task">
         <p>Add TODO</p>
         <div className="input-wrapper">
-          <input className="input" type="text" />
-          <button className="add-button" onClick={this.handelAddTask}>Add</button>
+          <input className="input" type="text" onChange={this.props.newTaskValueChange} value={this.props.newTaskValue} />
+          <button className="add-button" onClick={this.props.addTask}>Add</button>
         </div>
-        <TasksStatus />
+        <TasksStatus tasks={this.props.tasks}/>
       </div>
     )
   }
