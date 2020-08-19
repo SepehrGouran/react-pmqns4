@@ -29,25 +29,28 @@ export class App extends React.Component {
 
   handelAddTask = () => {
     if (this.state.newTask.title !== '') {
-      this.state.tasks.push(this.state.newTask);
-      this.setState({tasks: this.state.tasks, newTask: {title: ''}});
+      const tasks = [...this.state.tasks];
+      tasks.push(this.state.newTask);
+      this.setState({tasks: tasks, newTask: {title: ''}});
     }
   }
 
   handelStatusChange = (index) => {
-    const status = this.state.tasks[index].status;
+    const tasks = [...this.state.tasks];
+    const status = tasks[index].status;
     if (status === 'todo') {
-      this.state.tasks[index].status = 'completed';
-      this.setState({tasks: this.state.tasks});
+      tasks[index].status = 'completed';
+      this.setState({tasks: tasks});
     } else {
-      this.state.tasks[index].status = 'todo';
-      this.setState({tasks: this.state.tasks});
+      tasks[index].status = 'todo';
+      this.setState({tasks: tasks});
     }    
   }
 
   handelDeleteTask = (index) => {
-    this.state.tasks.splice(index, 1);
-    this.setState({tasks: this.state.tasks});
+    const tasks = [...this.state.tasks];
+    tasks.splice(index, 1);
+    this.setState({tasks: tasks});
   }
 
   render() {
